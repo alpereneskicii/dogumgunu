@@ -414,14 +414,22 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        transform: translateY(-40px); /* Yukarı taşır */
+
         opacity: 0;
         pointer-events: none;
-        transition: opacity 1.5s ease;
+        transition:
+          opacity 1.5s ease,
+          transform 1.5s ease;
       }
+
       #finale.show {
         opacity: 1;
         pointer-events: auto;
+        transform: translateY(-40px);
       }
+
       #finale h1 {
         font-family: "Baloo 2";
         font-weight: 800;
@@ -461,7 +469,7 @@
       #finale h1,
       #finale h2,
       #nextBtn {
-        margin-top: 32px;
+        margin-top: 10px;
         padding: 14px 34px;
         border: none;
         border-radius: 999px;
